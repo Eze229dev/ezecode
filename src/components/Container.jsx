@@ -1,5 +1,5 @@
 
-// ...existing code...
+
 export const Container = ({ children, className }) => {
     return (
         <div className={`max-w-[80rem] mx-auto px-5 md:px-10 lg:px-15 ${className || ""}`}>
@@ -7,4 +7,3 @@ export const Container = ({ children, className }) => {
         </div>
     );
 };
-// ...existing code...

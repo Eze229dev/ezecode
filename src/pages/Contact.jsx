@@ -30,8 +30,8 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
-          to_email: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
@@ -41,7 +41,7 @@ const Contact = () => {
           setLoading(false);
           showAlert({
             show: true,
-            text: "Merci pour votre message! Je vous répondrai bientôt.",
+            text: "Thank you for your message! I'll get back to you soon.",
             type: "success",
           });
 
@@ -60,7 +60,7 @@ const Contact = () => {
 
           showAlert({
             show: true,
-            text: "Erreur lors de l'envoi du message. Veuillez réessayer.",
+            text: "Error sending your message. Please try again.",
             type: "danger",
           });
         }
@@ -84,9 +84,9 @@ const Contact = () => {
       <section className="py-12 lg:py-20 border-b border-stroke-1">
         <Container>
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-5xl font-bold text-n-1 mb-6">Restons en Contact</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-n-1 mb-6">Get in Touch</h1>
             <p className="text-lg text-n-3 leading-relaxed">
-              Je suis toujours intéressé à entendre parler de nouveaux projets et opportunités. N'hésitez pas à m'envoyer un message.
+              I'm always interested in hearing about new projects and opportunities. Feel free to reach out to me.
             </p>
           </div>
         </Container>
@@ -100,7 +100,7 @@ const Contact = () => {
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-n-1 mb-2">
-                  Nom
+                  Name
                 </label>
                 <input
                   type="text"
@@ -109,9 +109,9 @@ const Contact = () => {
                   value={form.name}
                   onChange={handleChange}
                   required
-                  placeholder="Votre nom"
+                  placeholder="Your name"
                   className="w-full px-4 py-3 bg-n-8 border border-stroke-1 rounded-lg text-n-1 placeholder-n-4 focus:outline-none focus:border-p-3 focus:ring-1 focus:ring-p-3 transition-all duration-300"
-                  aria-label="Votre nom"
+                  aria-label="Your name"
                 />
               </div>
 
@@ -127,9 +127,9 @@ const Contact = () => {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  placeholder="votre@email.com"
+                  placeholder="your@email.com"
                   className="w-full px-4 py-3 bg-n-8 border border-stroke-1 rounded-lg text-n-1 placeholder-n-4 focus:outline-none focus:border-p-3 focus:ring-1 focus:ring-p-3 transition-all duration-300"
-                  aria-label="Votre adresse email"
+                  aria-label="Your email address"
                 />
               </div>
 
@@ -144,10 +144,10 @@ const Contact = () => {
                   value={form.message}
                   onChange={handleChange}
                   required
-                  placeholder="Décrivez votre projet ou votre idée..."
+                  placeholder="Tell me about your project or idea..."
                   rows="6"
                   className="w-full px-4 py-3 bg-n-8 border border-stroke-1 rounded-lg text-n-1 placeholder-n-4 focus:outline-none focus:border-p-3 focus:ring-1 focus:ring-p-3 transition-all duration-300 resize-none"
-                  aria-label="Votre message"
+                  aria-label="Your message"
                 />
               </div>
 
@@ -159,21 +159,21 @@ const Contact = () => {
                   className={`w-full px-6 py-3 bg-p-3 text-n-9 font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 ${
                     loading ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105 active:scale-95'
                   }`}
-                  aria-label="Envoyer le message"
+                  aria-label="Send message"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center gap-2">
                       <span className="inline-block w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                      Envoi en cours...
+                      Sending...
                     </span>
                   ) : (
-                    'Envoyer le message'
+                    'Send Message'
                   )}
                 </button>
               </div>
 
               <p className="text-sm text-n-4 text-center">
-                Je réponds généralement dans les 24 heures.
+                I typically respond within 24 hours.
               </p>
             </form>
           </div>
@@ -185,7 +185,7 @@ const Contact = () => {
         <Container>
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl lg:text-3xl font-bold text-n-1 mb-8 text-center">
-              Autres moyens de me contacter
+              Other Ways to Reach Me
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <a

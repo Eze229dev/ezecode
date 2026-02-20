@@ -2,15 +2,7 @@ import { Container } from "./Container";
 import { social } from "../constants";
 import { Link } from "react-router-dom";
 
-/**
- * Footer Component
- * Appears on all pages (wrapped by Layout)
- * Contains:
- * - Brand/name section
- * - Navigation links
- * - Social media links
- * - Copyright info
- */
+
 export const Footer = () => {
   return (
     <footer className="bg-n-7 border-t border-stroke-1 mt-12 lg:mt-20 py-8 lg:py-12">

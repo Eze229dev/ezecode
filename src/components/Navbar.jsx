@@ -23,15 +23,15 @@ export default function Navbar() {
       <Container>
         <div className="relative z-10 flex items-center justify-between py-4 lg:py-6">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0" onClick={closeMenu}>
-            <a href="#"
-                className="flex items-center  font-bold  text-3xl md:text-xl"
-            >
+          <Link to="/" className="flex-shrink-0 flex items-center  font-bold  text-3xl md:text-xl" onClick={closeMenu}>
+            
+              
+            
                 
                 <CodeXml className="mr-2"/>
                 EZE
                 <span className="text-p-3">CODE</span>
-            </a>
+            
 
           </Link>
 
@@ -52,12 +52,13 @@ export default function Navbar() {
           {/* Mobile Hamburger Menu Button */}
           <button
             onClick={toggleMenu}
+               
             className="md:hidden flex flex-col gap-1 relative w-8 h-8 p-1"
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-expanded={isMenuOpen}
+            aria-expanded={isMenuOpen} 
             aria-controls="mobile-menu"
           >
-            <span
+            <span 
               className={`block w-6 h-0.5 bg-n-1 transition-all duration-300 origin-center ${
                 isMenuOpen ? 'rotate-45 translate-y-2.5' : ''
               }`}
